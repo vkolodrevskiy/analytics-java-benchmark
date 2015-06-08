@@ -123,3 +123,8 @@ The data and graphs are available as public Google spreadsheets:
 ## Run it yourself
 
 You can run the benchmark yourself via the `JavaClientBenchmark` main class.
+
+Also you will need to specify `java.library.path`, that will looks something like:
+```
+-Djava.library.path=/Users/test/work/github/analytics-java-benchmark/lib
+```
