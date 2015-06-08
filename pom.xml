@@ -12,6 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <analytics.version>2.0.0-SNAPSHOT</analytics.version>
   </properties>
 
   <dependencies>
@@ -33,12 +34,18 @@
 		<artifactId>joda-time</artifactId>
 		<version>2.1</version>
 	</dependency>
-	
-	<dependency>
-	  <groupId>com.github.segmentio</groupId>
-	  <artifactId>analytics</artifactId>
-	  <version>0.2.0</version>
-	</dependency>
+
+    <dependency>
+      <groupId>com.segment.analytics.java</groupId>
+      <artifactId>analytics</artifactId>
+      <version>${analytics.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.segment.analytics.java</groupId>
+      <artifactId>analytics-core</artifactId>
+      <version>${analytics.version}</version>
+    </dependency>
 
     <dependency>
       <groupId>org.fusesource</groupId>
@@ -46,4 +53,18 @@
       <version>1.6.4</version>
     </dependency>
   </dependencies>
+
+  <repositories>
+    <repository>
+      <id>ossrh</id>
+      <name>Sonatype Snapshot Repository</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 </project>
